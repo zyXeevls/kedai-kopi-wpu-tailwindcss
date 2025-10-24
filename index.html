@@ -2,258 +2,212 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kedai Kopi Jaelani</title>
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- tailwindcss -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Poppins Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
 
         .navbar-menu.active {
-            display: block;
+            display: block !important;
             position: absolute;
             top: 100%;
             left: 0;
             width: 100%;
-            background-color: rgb(99, 99, 99);
-            padding: 0;
+            background-color: rgb(64, 64, 64);
+            z-index: 40;
         }
 
         .navbar-menu.active li a {
             display: block;
-            padding: 15px 20px;
-            margin: 0.5rem;
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
-
 </head>
 
-<body class="bg-stone-950">
-    <nav class="flex justify-between px-20 py-5 z-50 sticky bg-gradient-to-r from-stone-800 to-stone-950 top-0">
-        <div class="">
-            <h1 class="text-xl font-bold justify-center text-white">Kedai <span
-                    class="text-yellow-900 italic">Zeyy</span>
-            </h1>
-        </div>
-        <div class="">
-            <ul class="text-xl hidden gap space-x-5 md:flex font-semibold navbar-menu px-2">
-                <li><a href="#" class="text-gray-200 hover:text-yellow-800">Home</a></li>
-                <li><a href="#about" class="text-gray-200 hover:text-yellow-800">About</a></li>
-                <li><a href="#menu" class="text-gray-200 hover:text-yellow-800">Menu</a></li>
-                <li><a href="#contact" class="text-gray-200 hover:text-yellow-800">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul class="flex space-x-3 text-white font-semibold text-2xl">
-                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <button class="lg:hidden" id="hamburgerMenu"><i class="fa-solid fa-bars"></i></button>
-            </ul>
+<body class="bg-stone-950 text-white overflow-x-hidden">
+    <nav
+        class="flex items-center justify-between px-6 md:px-20 py-5 sticky top-0 bg-gradient-to-r from-stone-800 to-stone-950 z-50">
+        <h1 class="text-xl font-bold text-white">
+            Kedai <span class="text-yellow-800 italic">Zeyy</span>
+        </h1>
+
+        <ul class="hidden md:flex space-x-6 font-semibold navbar-menu">
+            <li><a href="#" class="hover:text-yellow-800">Home</a></li>
+            <li><a href="#about" class="hover:text-yellow-800">About</a></li>
+            <li><a href="#menu" class="hover:text-yellow-800">Menu</a></li>
+            <li><a href="#contact" class="hover:text-yellow-800">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center space-x-4 text-2xl">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <button class="md:hidden text-2xl" id="hamburgerMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <section class="bg-[url(img/bg-hero.webp)] h-[90vh] bg-cover bg-center bg-no-repeat flex items-center">
-        <div class="px-20 space-y-5">
-            <h2 class="text-6xl font-bold text-white">Nikmati Secangkir <br> <span class="text-yellow-800">Kopimu</span>
-                Pagi Ini</h2>
-            <p class="text-gray-400 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+    <section
+        class="bg-[url('img/bg-hero.webp')] bg-cover bg-center bg-no-repeat h-[80vh] md:h-[90vh] flex items-center px-6 md:px-20">
+        <div class="space-y-5 max-w-xl">
+            <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                Nikmati Secangkir <br />
+                <span class="text-yellow-800">Kopimu</span> Pagi Ini
+            </h2>
+            <p class="text-gray-300 text-base md:text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
             </p>
-            <a href="#" class="bg-yellow-600 px-5 py-2 rounded-full font-semibold">Beli Sekarang</a>
+            <a href="#"
+                class="inline-block bg-yellow-600 hover:bg-yellow-700 px-5 py-2 rounded-full font-semibold transition">
+                Beli Sekarang
+            </a>
         </div>
     </section>
 
     <section id="about"
-        class="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-stone-900 text-white px-6 md:px-12 py-16 gap-10">
+        class="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-stone-900 px-6 md:px-12 py-16 gap-10">
         <div class="w-full lg:w-1/2 flex justify-center">
             <img src="img/about-coffe.avif" alt="Kopi"
-                class="rounded-xl shadow-lg object-cover w-full max-w-md lg:max-w-full h-64 md:h-96" />
+                class="rounded-xl shadow-lg object-cover w-full max-w-sm md:max-w-md h-64 md:h-96" />
         </div>
         <div class="w-full lg:w-1/2">
-            <div class="lg:pl-10">
-                <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                    Kenapa Memilih <span class="text-yellow-700">Kopi Kami?</span>
-                </h1>
-                <p class="text-gray-300 text-base md:text-lg leading-relaxed">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus ipsum dolores rem,
-                    corporis et in pariatur, iste, ipsa quaerat culpa tempora vel architecto quasi saepe!
-                    Repellat architecto accusamus nemo nam quibusdam. Nam rerum placeat fuga quasi repellat
-                    ut reprehenderit autem rem corporis, magnam hic. Libero aspernatur tempora maxime,
-                    quis quod debitis, sapiente suscipit corporis necessitatibus fuga saepe. Provident ullam
-                    tempore, quas iusto corporis asperiores dicta magni repellendus blanditiis, mollitia aspernatur?
-                </p>
-                <button
-                    class="mt-8 bg-yellow-700 hover:bg-yellow-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-200">
-                    Pelajari Lebih Lanjut
-                </button>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="menu" class="py-16 bg-gradient-to-r from-stone-900 to-stone-950 text-center">
-        <div class="max-w-6xl mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl text-white font-bold mb-6">
-                <span class="text-yellow-700">Menu</span> Kami
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">
+                Kenapa Memilih <span class="text-yellow-700">Kopi Kami?</span>
             </h1>
-            <p class="text-gray-300 max-w-3xl mx-auto mb-12 text-base md:text-lg leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eligendi quaerat et iste
-                laborum hic molestiae explicabo, consequuntur voluptatum laudantium rem ullam commodi tempora?
+            <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ipsum dolores rem corporis pariatur vel
+                architecto quasi saepe repellat architecto accusamus nemo nam quibusdam.
             </p>
-            <div class="flex flex-wrap justify-center gap-8">
-                <div
-                    class="bg-stone-800/50 hover:bg-stone-800 transition duration-300 rounded-xl p-6 shadow-lg hover:shadow-yellow-900/30">
-                    <img src="img/menu.webp" alt="Espresso"
-                        class="mx-auto rounded-full w-40 h-40 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
-                    <h3 class="text-white font-bold text-2xl mt-6">Espresso</h3>
-                    <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 15K</p>
-                    <a href="https://wa.me/6285692586882"
-                        class="bg-yellow-600 px-5 py-2 rounded-full font-semibold ">Order
-                        Sekarang</a>
-                </div>
-                <div
-                    class="bg-stone-800/50 hover:bg-stone-800 transition duration-300 rounded-xl p-6 shadow-lg hover:shadow-yellow-900/30">
-                    <img src="img/menu.webp" alt="Espresso"
-                        class="mx-auto rounded-full w-40 h-40 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
-                    <h3 class="text-white font-bold text-2xl mt-6">Espresso</h3>
-                    <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 15K</p>
-                    <a href="https://wa.me/6285692586882"
-                        class="bg-yellow-600 px-5 py-2 rounded-full font-semibold ">Order
-                        Sekarang</a>
-                </div>
-                <div
-                    class="bg-stone-800/50 hover:bg-stone-800 transition duration-300 rounded-xl p-6 shadow-lg hover:shadow-yellow-900/30">
-                    <img src="img/menu.webp" alt="Espresso"
-                        class="mx-auto rounded-full w-40 h-40 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
-                    <h3 class="text-white font-bold text-2xl mt-6">Espresso</h3>
-                    <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 15K</p>
-                    <a href="https://wa.me/6285692586882"
-                        class="bg-yellow-600 px-5 py-2 rounded-full font-semibold ">Order
-                        Sekarang</a>
-                </div>
-                <div
-                    class="bg-stone-800/50 hover:bg-stone-800 transition duration-300 rounded-xl p-6 shadow-lg hover:shadow-yellow-900/30">
-                    <img src="img/menu.webp" alt="Espresso"
-                        class="mx-auto rounded-full w-40 h-40 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
-                    <h3 class="text-white font-bold text-2xl mt-6">Espresso</h3>
-                    <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 15K</p>
-                    <a href="https://wa.me/6285692586882"
-                        class="bg-yellow-600 px-5 py-2 rounded-full font-semibold ">Order
-                        Sekarang</a>
-                </div>
-                <div
-                    class="bg-stone-800/50 hover:bg-stone-800 transition duration-300 rounded-xl p-6 shadow-lg hover:shadow-yellow-900/30">
-                    <img src="img/menu.webp" alt="Espresso"
-                        class="mx-auto rounded-full w-40 h-40 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
-                    <h3 class="text-white font-bold text-2xl mt-6">Espresso</h3>
-                    <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 15K</p>
-                    <a href="https://wa.me/6285692586882"
-                        class="bg-yellow-600 px-5 py-2 rounded-full font-semibold ">Order
-                        Sekarang</a>
-                </div>
-                <div
-                    class="bg-stone-800/50 hover:bg-stone-800 transition duration-300 rounded-xl p-6 shadow-lg hover:shadow-yellow-900/30">
-                    <img src="img/menu.webp" alt="Espresso"
-                        class="mx-auto rounded-full w-40 h-40 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
-                    <h3 class="text-white font-bold text-2xl mt-6">Espresso</h3>
-                    <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 15K</p>
-                    <a href="https://wa.me/6285692586882"
-                        class="bg-yellow-600 px-5 py-2 rounded-full font-semibold ">Order
-                        Sekarang</a>
-                </div>
+            <button
+                class="mt-8 bg-yellow-700 hover:bg-yellow-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md">
+                Pelajari Lebih Lanjut
+            </button>
+        </div>
+    </section>
 
+    <section id="menu" class="py-16 bg-gradient-to-r from-stone-900 to-stone-950 text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            <span class="text-yellow-700">Menu</span> Kami
+        </h1>
+        <p class="text-gray-300 max-w-3xl mx-auto mb-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eligendi quaerat et iste laborum hic molestiae
+            explicabo.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            <div class="bg-stone-800/50 hover:bg-stone-800 transition rounded-xl p-6 shadow-lg">
+                <img src="img/menu.webp" alt="Espresso"
+                    class="mx-auto rounded-full w-36 h-36 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
+                <h3 class="text-white font-bold text-2xl mt-6">Espresso</h3>
+                <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 15K</p>
+                <a href="https://wa.me/6285692586882" class="bg-yellow-600 px-5 py-2 rounded-full font-semibold">Order
+                    Sekarang</a>
+            </div>
+
+            <div class="bg-stone-800/50 hover:bg-stone-800 transition rounded-xl p-6 shadow-lg">
+                <img src="img/menu.webp" alt="Espresso"
+                    class="mx-auto rounded-full w-36 h-36 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
+                <h3 class="text-white font-bold text-2xl mt-6">Cappuccino</h3>
+                <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 18K</p>
+                <a href="https://wa.me/6285692586882" class="bg-yellow-600 px-5 py-2 rounded-full font-semibold">Order
+                    Sekarang</a>
+            </div>
+
+            <div class="bg-stone-800/50 hover:bg-stone-800 transition rounded-xl p-6 shadow-lg">
+                <img src="img/menu.webp" alt="Espresso"
+                    class="mx-auto rounded-full w-36 h-36 object-cover shadow-md border-4 border-yellow-700/40 hover:scale-105 transition duration-300" />
+                <h3 class="text-white font-bold text-2xl mt-6">Latte</h3>
+                <p class="text-yellow-700 font-semibold text-lg mt-2 py-3">IDR 20K</p>
+                <a href="https://wa.me/6285692586882" class="bg-yellow-600 px-5 py-2 rounded-full font-semibold">Order
+                    Sekarang</a>
             </div>
         </div>
     </section>
 
-
-    <section id="contact" class="mx-auto mt-20 max-w-7xl px-6 py-16 rounded-lg  flex flex-col items-center text-center">
-        <h2 class="text-4xl md:text-5xl text-white font-bold">
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-center">
             <span class="text-yellow-800">Kontak</span> Kami
         </h2>
-        <p class="text-white py-6 max-w-3xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, consectetur?
-            Sapiente tempore nihil quia veniam impedit quisquam suscipit, reiciendis ipsa!
-            Assumenda soluta repudiandae deleniti sunt ullam deserunt culpa, dolore voluptates porro sit adipisci.
+        <p class="text-white py-6 max-w-3xl mx-auto text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, consectetur? Sapiente tempore nihil quia
+            veniam.
         </p>
 
-        <div class="flex flex-col lg:flex-row gap-8 w-full mt-10 bg-stone-800">
-            <div class="w-full lg:w-2/3 h-full md:h-[450px] overflow-hidden shadow-lg">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2955690207737!2d106.25624387404505!3d-6.3557727621766595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210d662e55e59%3A0x859e05621f0b61aa!2sSMK%20Negeri%201%20Rangkasbitung!5e0!3m2!1sid!2sid!4v1761032355158!5m2!1sid!2sid"
-                    class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+        <div class="flex flex-col lg:flex-row gap-8 w-full mt-10">
+            <div class="w-full lg:w-2/3 h-64 md:h-[450px] shadow-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." class="w-full h-full border-0"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <form class="w-full lg:w-1/3 bg-stone-900 p-6 shadow-lg flex flex-col gap-4 text-left">
+            <form class="w-full lg:w-1/3 bg-stone-900 p-6 shadow-lg rounded-lg flex flex-col gap-4">
                 <div
                     class="flex items-center bg-stone-800 rounded-md p-3 focus-within:ring-2 focus-within:ring-yellow-700">
                     <i class="fa-regular fa-user text-yellow-700 mr-3 text-lg"></i>
                     <input type="text" class="bg-transparent text-white w-full focus:outline-none"
-                        placeholder="Masukaasn Nama Kamu" />
+                        placeholder="Masukkan Nama Kamu" />
                 </div>
                 <div
                     class="flex items-center bg-stone-800 rounded-md p-3 focus-within:ring-2 focus-within:ring-yellow-700">
                     <i class="fa-solid fa-envelope text-yellow-700 mr-3 text-lg"></i>
-                    <input type="text" class="bg-transparent text-white w-full focus:outline-none"
-                        placeholder="Masukaasn Nama Kamu" />
+                    <input type="email" class="bg-transparent text-white w-full focus:outline-none"
+                        placeholder="Masukkan Email Kamu" />
                 </div>
                 <div
                     class="flex items-center bg-stone-800 rounded-md p-3 focus-within:ring-2 focus-within:ring-yellow-700">
                     <i class="fa-solid fa-phone text-yellow-700 mr-3 text-lg"></i>
-                    <input type="number" class="bg-transparent text-white w-full focus:outline-none"
-                        placeholder="masukan nomor telepon" />
+                    <input type="tel" class="bg-transparent text-white w-full focus:outline-none"
+                        placeholder="Masukkan Nomor Telepon" />
                 </div>
 
-
                 <button type="submit"
-                    class="bg-yellow-800 text-white font-semibold py-3 rounded-md hover:bg-yellow-700 transition duration-200">
+                    class="bg-yellow-800 hover:bg-yellow-700 text-white font-semibold py-3 rounded-md transition">
                     Kirim Pesan
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-yellow-800">
-        <div class="flex flex-col items-center justify-center py-10">
-            <div class="flex flex-row text-3xl text-white gap-4">
+    <footer class="bg-yellow-800 mt-10">
+        <div class="flex flex-col items-center justify-center py-10 px-4 text-center space-y-4">
+            <div class="flex justify-center text-3xl text-white gap-4">
                 <a href="https://wa.me/6285692586882"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-tiktok"></i></a>
             </div>
-            <div class="py-5">
-                <ul class="flex flex-row gap-4 text-white text-xl font-semibold">
-                    <li class="hover:text-yellow-600"><a href="#">Home</a></li>
-                    <li class="hover:text-yellow-600"><a href="#">About</a></li>
-                    <li class="hover:text-yellow-600"><a href="#">Menu</a></li>
-                    <li class="hover:text-yellow-600"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <p class="text-white text-base font-semibold">Created by <span class="text-indigo-400">Muhamad
-                        Jaelani</span> &copy All Right Reserved</p>
-            </div>
+
+            <ul class="flex flex-wrap justify-center gap-4 text-white text-lg font-semibold">
+                <li><a href="#" class="hover:text-yellow-600">Home</a></li>
+                <li><a href="#about" class="hover:text-yellow-600">About</a></li>
+                <li><a href="#menu" class="hover:text-yellow-600">Menu</a></li>
+                <li><a href="#contact" class="hover:text-yellow-600">Contact</a></li>
+            </ul>
+
+            <p class="text-white text-sm md:text-base font-semibold">
+                Created by <span class="text-indigo-400">Muhamad Jaelani</span> &copy; All Rights Reserved
+            </p>
         </div>
     </footer>
 
-
     <script>
-        navbarnav = document.querySelector('.navbar-menu');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        const hamburger = document.querySelector('#hamburgerMenu');
 
-        document.querySelector('#hamburgerMenu').onclick = () => {
-            navbarnav.classList.toggle('active');
-        }
+        hamburger.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
     </script>
 </body>
 
